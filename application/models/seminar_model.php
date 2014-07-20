@@ -173,11 +173,12 @@ class Seminar_model extends CI_Model {
                             '<iframe src="//www.ustream.tv/embed/18513569?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
                             '<iframe src="//www.ustream.tv/embed/18513572?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
                             '<iframe src="//www.ustream.tv/embed/18513578?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
-                            '<iframe src="//www.ustream.tv/embed/18513580?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>'                        ),
+                            '<iframe src="//www.ustream.tv/embed/18513580?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>'
+                        ),
                         $body[1]
                 );
             } else {
-                $bodyContent = '';
+                $bodyContent = $body[0];
             }
 
             $article_array['preview'] = $body[0];
@@ -220,7 +221,7 @@ class Seminar_model extends CI_Model {
                         $body[1]
                 );
             } else {
-                $bodyContent = '';
+                $bodyContent = $body[0];
             }
                     
                     $article_array['preview'] = $body[0];
