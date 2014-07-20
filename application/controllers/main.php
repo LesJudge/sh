@@ -109,7 +109,7 @@ class Main extends CI_Controller {
         $this->data['slider'] = false;
         $article = $this->seminar->get_article_content($this->data['langID'], $articleId);
         if (is_array($article)) {
-                $body = explode($this::PAGEBREAK, $article['body']);
+                $body = explode(Seminar_model::PAGEBREAK, $article['body']);
                 if (isset($body[1])) {
                     $bodyContent = str_replace(
                             array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
