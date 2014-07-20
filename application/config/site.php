@@ -3,10 +3,10 @@ if (!defined('BASEPATH')) {
 	exit('No direct script access allowed');
 }
 $config['site_new'] = false; // New or old design.
-$config['site_before_popup_article_id'] = 192; // Article's ID that should be display on the "old" start page.
-$config['site_faq_article_id'] = 192;
+$config['site_before_popup_article_id'] = 214; // Article's ID that should be display on the "old" start page.
+$config['site_faq_article_id'] = 215;
 $config['site_ustream_article_id'] = 3;
-$config['site_cs_article_id'] = 4;
+$config['site_cs_article_id'] = 216;
 // Templates configuration.
 $config['site_body_class_default'] = 'type-1';
 $config['site_body_class_new'] = 'type-2';
