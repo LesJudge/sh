@@ -1,0 +1,12 @@
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2405,'LIVE_COVERAGE_COMING_SOON','ffs_microsite','Live coverage',1,0,0);
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2406,'TRAVEL_ENLIGHTENED','ffs_microsite','TRAVEL_ENLIGHTENED',1,1,0);
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2407,'go_to_fireflies_com','ffs_microsite','Go to fireflies.com >',1,1,0);
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2408,'live_coverage_from_five_star','ffs_microsite','LIVE COVERAGE FROM THE FIVE STAR SEMINAR',1,1,0);
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2409,'faq','ffs_microsite','FAQ',1,1,0);
+INSERT INTO `captions` (`id`,`caption`,`modul_name`,`default_text`,`simple_text`,`approved`,`deleted`) VALUES (2410,'compensationsystem','ffs_microsite','Compensation System',1,1,0);
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73243,2405,2,'Live coverage coming soon!');
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73244,2406,2,'TRAVEL ENLIGHTENED');
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73245,2407,2,'GO TO FIREFLIES.COM');
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73246,2408,2,'LIVE COVERAGE FROM THE FIVE STAR SEMINAR');
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73247,2409,2,'FAQ');
+INSERT INTO `captions_lang` (`id`,`caption_id`,`lang_id`,`lang_text`) VALUES (73248,2410,2,'Compensation System');
