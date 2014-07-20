@@ -109,6 +109,24 @@ class Main extends CI_Controller {
         $this->data['slider'] = false;
         $article = $this->seminar->get_article_content($this->data['langID'], $articleId);
         if (is_array($article)) {
+                $body = explode($this::PAGEBREAK, $article['body']);
+                if (isset($body[1])) {
+                    $bodyContent = str_replace(
+                            array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
+                            array(
+                                '<iframe src="//www.ustream.tv/embed/18513575?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
+                                '<iframe src="//www.ustream.tv/embed/18513564?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
+                                '<iframe src="//www.ustream.tv/embed/18513569?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
+                                '<iframe src="//www.ustream.tv/embed/18513572?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
+                                '<iframe src="//www.ustream.tv/embed/18513578?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>',
+                                '<iframe src="//www.ustream.tv/embed/18513580?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto; display: block;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center; margin: 0 auto;" target="_blank">Live streaming video by Ustream</a>'
+                            ),
+                            $body[1]
+                    );
+                } else {
+                    $bodyContent = $body[0];
+                }
+                $data['articles_array']['body'] = $body;
             $data['articles_array'] = $article;
             $this->data['header'] = $this->load->view($this->site->getTemplateItem('header_page'), $data, TRUE);
             $this->data['content'] = $this->load->view('content_page', $data, true);
