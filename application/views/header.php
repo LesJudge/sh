@@ -20,8 +20,9 @@
                                     <div class="hotline-menu-number"><?php echo $this->data['Lang']['hotline_szamok']; ?></div>
                                 </div>
                             </li>
+                            <!--
                             <li class="topLevel-li">  <a href="<?php echo base_url('news'); ?>"><div class="news-menu"><?php echo $this->data['Lang']['hirek']; ?></div></a></li>
-                                    
+                            -->    
                           </ul>           
                   </div>
             </div>
