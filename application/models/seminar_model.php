@@ -207,7 +207,7 @@ class Seminar_model extends CI_Model {
                 ->join('article AS b', 'a.article_id=b.article_id')
                 ->where('a.lang_id', $lang_id)
                 ->where('b.deleted !=', 1)
-                ->where('b.editable !=', 1)
+                //->where('b.editable !=', 1)
                 //->where('b.enabled', 1)
                 ->where('b.menuitem_id', $this::FIVESTARNEWS)
                 ->order_by('a.ts_mod', 'DESC')
