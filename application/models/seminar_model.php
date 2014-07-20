@@ -164,7 +164,7 @@ class Seminar_model extends CI_Model {
             $article_array['index_image'] = $this->_get_index_image($article_array['article_id']);
             $body = explode($this::PAGEBREAK, $article_array['body']);
             
-            if (isset($body[1]) && $body[1] !== $body[0]) {
+            if (isset($body[1])) {
                 $bodyContent = str_replace(
                         array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
                         array(
@@ -206,7 +206,7 @@ class Seminar_model extends CI_Model {
                     $article_array['index_image'] = $this->_get_index_image($article_array['article_id']);
                     $body = explode($this::PAGEBREAK, $article_array['body']);
                     
-            if (isset($body[1]) && $body[1] !== $body[0]) {
+            if (isset($body[1])) {
                 $bodyContent = str_replace(
                         array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
                         array(
