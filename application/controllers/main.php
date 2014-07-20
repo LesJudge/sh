@@ -126,7 +126,7 @@ class Main extends CI_Controller {
                 } else {
                     $bodyContent = $body[0];
                 }
-                $data['articles_array']['body'] = $body;
+                $article['body'] = $bodyContent;
             $data['articles_array'] = $article;
             $this->data['header'] = $this->load->view($this->site->getTemplateItem('header_page'), $data, TRUE);
             $this->data['content'] = $this->load->view('content_page', $data, true);
