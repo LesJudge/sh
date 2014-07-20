@@ -110,9 +110,9 @@ class Main extends CI_Controller {
         $article = $this->seminar->get_article_content($this->data['langID'], $articleId);
         if (is_array($article)) {
             $data['articles_array'] = $article;
-            $this->data['header'] = $this->load->view($this->site->getSiteConfigItem('header_new'), $data, TRUE);
+            $this->data['header'] = $this->load->view($this->site->getTemplateItem('header'), $data, TRUE);
             $this->data['content'] = $this->load->view('content_page', $data, true);
-            $this->data['footer'] = $this->load->view($this->site->getSiteConfigItem('footer_new'), $data, TRUE);
+            $this->data['footer'] = $this->load->view($this->site->getTemplateItem('footer'), $data, TRUE);
             $this->load->view('wrapper_page', $this->data);
         } else {
             redirect('/');
