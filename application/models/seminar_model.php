@@ -164,7 +164,7 @@ class Seminar_model extends CI_Model {
             $article_array['index_image'] = $this->_get_index_image($article_array['article_id']);
             $body = explode($this::PAGEBREAK, $article_array['body']);
             $article_array['preview'] = $body[0];
-            $article_array['body'] = $body[1];
+            $article_array['body'] = isset($body[1]) ? $body[1] : $body[0];
             
             return $article_array;
             
