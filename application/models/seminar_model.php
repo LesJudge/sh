@@ -167,7 +167,7 @@ class Seminar_model extends CI_Model {
             if (isset($body[1]) && $body[1] !== $body[0]) {
                 $bodyContent = $body[1];
             } else {
-                $bodyContent = $body[0];
+                $bodyContent = '';
             }
 
             $article_array['preview'] = $body[0];
@@ -199,7 +199,7 @@ class Seminar_model extends CI_Model {
             if (isset($body[1]) && $body[1] !== $body[0]) {
                 $bodyContent = $body[1];
             } else {
-                $bodyContent = $body[0];
+                $bodyContent = '';
             }
                     
                     $article_array['preview'] = $body[0];
