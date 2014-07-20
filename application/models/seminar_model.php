@@ -165,7 +165,18 @@ class Seminar_model extends CI_Model {
             $body = explode($this::PAGEBREAK, $article_array['body']);
             
             if (isset($body[1]) && $body[1] !== $body[0]) {
-                $bodyContent = $body[1];
+                $bodyContent = str_replace(
+                        array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
+                        array(
+                            '<iframe src="//www.ustream.tv/embed/18513575?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513564?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513569?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513572?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513578?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513580?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>'
+                        ),
+                        $body[1]
+                );
             } else {
                 $bodyContent = '';
             }
@@ -197,7 +208,18 @@ class Seminar_model extends CI_Model {
                     $body = explode($this::PAGEBREAK, $article_array['body']);
                     
             if (isset($body[1]) && $body[1] !== $body[0]) {
-                $bodyContent = $body[1];
+                $bodyContent = str_replace(
+                        array('#stream_cz#', '#stream_en#', '#stream_hu#', '#stream_ro#', '#stream_ru#', '#stream_sk#'),
+                        array(
+                            '<iframe src="//www.ustream.tv/embed/18513575?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513564?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513569?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513572?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513578?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>',
+                            '<iframe src="//www.ustream.tv/embed/18513580?wmode=direct&autoplay=true" style="border: 0 none transparent; margin: 0 auto;" frameborder="no" width="480" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank">Live streaming video by Ustream</a>'
+                        ),
+                        $body[1]
+                );
             } else {
                 $bodyContent = '';
             }
