@@ -112,7 +112,7 @@ class Main extends CI_Controller {
             $data['articles_array'] = $article;
             $this->data['header'] = $this->load->view($this->site->getTemplateItem('header_page'), $data, TRUE);
             $this->data['content'] = $this->load->view('content_page', $data, true);
-            $this->data['footer'] = $this->load->view($this->site->getTemplateItem('footer_page'), $data, TRUE);
+            $this->data['footer'] = $this->load->view($this->site->getTemplateItem('footer'), $data, TRUE);
             $this->load->view('wrapper_page', $this->data);
         } else {
             redirect('/');
