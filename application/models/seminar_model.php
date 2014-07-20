@@ -163,8 +163,15 @@ class Seminar_model extends CI_Model {
             $article_array = $article_query->row_array();
             $article_array['index_image'] = $this->_get_index_image($article_array['article_id']);
             $body = explode($this::PAGEBREAK, $article_array['body']);
+            
+            if (isset($body[1]) && $body[1] !== $body[0]) {
+                $bodyContent = $body[1];
+            } else {
+                $bodyContent = $body[0];
+            }
+
             $article_array['preview'] = $body[0];
-            $article_array['body'] = isset($body[1]) ? $body[1] : $body[0];
+            $article_array['body'] = $bodyContent;
             
             return $article_array;
             
@@ -188,8 +195,15 @@ class Seminar_model extends CI_Model {
                     $article_array = $article_query->row_array();
                     $article_array['index_image'] = $this->_get_index_image($article_array['article_id']);
                     $body = explode($this::PAGEBREAK, $article_array['body']);
+                    
+            if (isset($body[1]) && $body[1] !== $body[0]) {
+                $bodyContent = $body[1];
+            } else {
+                $bodyContent = $body[0];
+            }
+                    
                     $article_array['preview'] = $body[0];
-                    $article_array['body'] = isset($body[1]) ? $body[1] : $body[0];
+                    $article_array['body'] = $bodyContent;
 
                     return $article_array;
                 }
