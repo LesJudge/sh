@@ -31,6 +31,8 @@ class Main extends CI_Controller {
     
     public function index() {
         //$data['buy_ticket_link'] = 'https://swisshalley.com/'.$this->data['langCode'].'/addtocart/ticket:turkey201407';
+        //$data['buy_ticket_link'] = base_url('packages');
+        $data['buy_ticket_link'] = base_url('packages');
 
         if (date('Y-m-d') < '2014-03-23') {
             $data['offer_valid'] = 'Offer valid until 22 March 2014, Saturday, 23:59 CET';
@@ -63,9 +65,6 @@ class Main extends CI_Controller {
             if (is_array($article)) { // If the article exists.
                 $siteBeforePopupContent = $article['body'];
             }
-            $data['buy_ticket_link'] = base_url('packages');
-        } else {
-            $data['buy_ticket_link'] = 'livecoverage';
         }
         $data['siteBeforePopupContent'] = $siteBeforePopupContent;
         $data['sliderImg'] = $this->site->getTemplateItem('slider_image');
