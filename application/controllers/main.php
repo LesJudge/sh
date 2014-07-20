@@ -39,7 +39,8 @@ class Main extends CI_Controller {
             $data['offer_valid'] = FALSE;
         }
 
-        $data['price'] = $this->seminar->get_price();
+        //$data['price'] = $this->seminar->get_price();
+        $data['price'] = false;
 
         $data['articles_array'] = $this->seminar->get_all_articles($this->data['langID']);
         $data['video'] = $this->seminar->get_video('intro_video');
