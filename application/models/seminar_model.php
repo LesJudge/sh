@@ -149,9 +149,9 @@ class Seminar_model extends CI_Model {
 	}
     
     public function get_news_by_url($url, $lang_id) {
-        
+
         $article_query = $this->db
-                ->select('a.article_id, a.title AS article_title, a.body, b.ts_mod AS activate_at')
+                ->select('a.article_id, a.title AS article_title, a.body, b.activate_at')
                 ->from('article_content AS a')
                 ->join('article AS b', 'a.article_id=b.article_id')
                 ->where('a.lang_id', $lang_id)
@@ -176,7 +176,7 @@ class Seminar_model extends CI_Model {
                 $article_array = $article_query->row_array();
                 
                 $article_query = $this->db
-                    ->select('a.article_id, a.title AS article_title, a.body, b.ts_mod AS activate_at')
+                    ->select('a.article_id, a.title AS article_title, a.body, b.activate_at')
                     ->from('article_content AS a')
                     ->join('article AS b', 'a.article_id=b.article_id')
                     ->where('a.lang_id', $lang_id)
@@ -202,7 +202,7 @@ class Seminar_model extends CI_Model {
     public function get_all_news($lang_id) {
         
         $article_query = $this->db
-                ->select('a.article_id, a.title AS article_title, b.ts_mod AS activate_at, a.burl')
+                ->select('a.article_id, a.title AS article_title, b.activate_at, a.burl')
                 ->from('article_content AS a')
                 ->join('article AS b', 'a.article_id=b.article_id')
                 ->where('a.lang_id', $lang_id)

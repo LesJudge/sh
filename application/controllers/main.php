@@ -184,7 +184,6 @@ class Main extends CI_Controller {
     }
     
     public function news($seo_url = NULL) {
-        redirect('/');
         $this->load->helper('security');
         if (!empty($seo_url)) {
             $data['news_array'] = $this->seminar->get_news_by_url(xss_clean($seo_url), $this->data['langID']);
