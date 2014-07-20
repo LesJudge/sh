@@ -105,8 +105,8 @@ class Main extends CI_Controller {
     private function loadArticleById($articleId)
     {
         // Override template.
-        $this->data['bodyClass'] = $this->site->getSiteConfigItem('body_class_new');
-        $this->data['slider'] = false;
+        //$this->data['bodyClass'] = $this->site->getSiteConfigItem('body_class_new');
+        //$this->data['slider'] = false;
         $article = $this->seminar->get_article_content($this->data['langID'], $articleId);
         if (is_array($article)) {
             $data['articles_array'] = $article;
