@@ -21,8 +21,7 @@
                                 </div>
                             </li>
                             <li class="topLevel-li">  <a href="<?php echo base_url('news'); ?>"><div class="news-menu"><?php echo $this->data['Lang']['hirek']; ?></div></a></li>
-                             <li class="topLevel-li"><a href="<?php echo base_url('flights'); ?>"><div class="flights-menu"><?php echo $this->data['Lang']['repules']; ?></div></a>
-   </li>                            
+                                    
                           </ul>           
                   </div>
             </div>
