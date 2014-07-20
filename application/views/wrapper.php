@@ -80,7 +80,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     });
     </script>
     <div class="modal fade" id="popup-modal" tabindex="-1" role="dialog" aria-labelledby="popup" aria-hidden="true">
-    <div class="modal-dialog popup-modal-dialog">
+    <div class="modal-dialog popup-modal-dialog modal-vertical-centered">
         <div class="modal-content">
            <div class="modal-body">	
             	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
