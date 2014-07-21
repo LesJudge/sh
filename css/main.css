@@ -34,9 +34,8 @@ body {
 }
 
 header {
-    width: 100%;
-    height: 60px;
-    position: absolute;
+    width: 100%;   
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -118,11 +117,11 @@ section {
     border-right: 1px #e96570 solid;
     border-left: 1px #e96570 solid;
     height: auto;
-    float: right;
-    max-width: 140px;
+    float: right;     
     font-size: 12px;
     z-index: 3000;
     position: relative;
+	display:table;
 }
 
 .lang-select:hover {
@@ -823,17 +822,11 @@ a {
 }
 
 .flights-menu, .news-menu { position:relative; z-index:10;
-    float: none;
-    border-left: 1px #e96570 solid;
+    float: none;    
     font-size: 12px;
     text-transform: uppercase;    
-    padding: 20px 40px;
 }
 
-.flights-menu:hover, .news-menu:hover {
-    cursor: pointer;
-    background-color: #e96570;
-}
 
 header > div > a {
     text-decoration: none;
@@ -841,11 +834,9 @@ header > div > a {
 }
 
 .hotline-menu {
-    float: none;
-    border-left: 1px #e96570 solid;
+    float: none;    
     font-size: 12px;
-    text-transform: uppercase;    
-    padding: 15px 40px;
+    text-transform: uppercase;      
     text-align: center;
     line-height: 1.2em;
 }
@@ -1221,6 +1212,7 @@ BODY 						{ background:#fff; }
 .footer-btn:hover 			{ color:#13afb5; }
 .logo 						{ position:relative; z-index:11; }
 #main-menu 					{ position:relative; z-index:10; padding-right:90px;}
+#main-menu .navbar			{ margin-bottom:0em;}
 .title 						{ }
 
 
@@ -1231,16 +1223,17 @@ BODY 						{ background:#fff; }
 .navbar-default .navbar-form { border:0em;}
 .navbar-default 			{ background:none;}
 .navbar 					{ border:0em;}
-.hotline-menu 				{ padding:15px 10px; } 
-.navbar-nav > LI > A 		{ padding:0em;}
+.navbar-nav > LI 			{ display:table-cell; float:none; height:60px; vertical-align:middle; text-align:center; border-left:1px solid #e96570; }
+.navbar-nav > LI > A 		{ padding:0em 1em; display:table-cell; height:60px; vertical-align:middle; text-align:center;}
+.hotline-menu				{ padding:0em 1em; }
 #menu_1						{ float:none; float:right;}
 
 BODY.type-1 .lang-select, 
-BODY.type-2 .lang-select	{ position:absolute; z-index:11; right:0em; padding:0em !important; top:0px;}
+BODY.type-2 .lang-select	{ position:absolute; z-index:11; right:0em; padding:0em !important; top:-2px;}
 BODY.type-2 .select-icon 	{ background-image:url(../media/language_btn_2.png); }
 BODY.type-2 .button:hover 	{ background:none;}
-.lang-select A 				{ display:block; padding:0em 0em; text-align:center;}
-.lang-select A .button		{ display:block; margin:0em; padding:1.7em 1em;} 
+.lang-select A 				{ display:table-row; padding:0em 0em; text-align:center;}
+.lang-select A .button		{ display:table-cell; margin:0em; padding:0em 1em; height:60px; vertical-align:middle;} 
 
 .news-node-link 			{ max-width:none; padding:0.5em 1.5em;  }
 BODY.type-2 .news-node-link { position:relative; z-index:10; background:none;  max-width:none; padding:0.5em 1em; 
@@ -1296,13 +1289,20 @@ BODY.type-2 .title-button A 	{ position:relative; z-index:10; display:inline-blo
 									-webkit-box-shadow:4px 5px 7px -3px #222; -moz-box-shadow: 4px 5px 7px -3px #222; box-shadow:4px 5px 7px -3px #222; 
 									behavior: url(../css/behavior/PIE.htc); }
 BODY.type-2 .logo 				{ width:160px;}
+
+BODY.type-1 .navbar-nav > LI,
+BODY.type-1 .lang-select	{ border-color:#e96570; }
+BODY.type-1 .navbar-nav > LI > A:hover { background:#e96570; }
+BODY.type-1 .hotline-menu-text  { color:#e96570;  }
+/*
 BODY.type-1 .hotline-menu, 
 BODY.type-1 .flights-menu, 
 BODY.type-1 .news-menu,  
 BODY.type-1 .lang-select 		{ border-color:#e96570; }
 BODY.type-1 .flights-menu:hover, 
 BODY.type-2 .news-menu:hover 	{ background:#e96570; }
-BODY.type-1 .hotline-menu-text  { color:#e96570;  }
+*/
+
 BODY.type-1 .lang-select 		{ background:#c7313c;  }
 BODY.type-1 .lang-select A 		{ background:#c7313c;}
 BODY.type-1 .lang-select A:hover { background:#e96570;}
@@ -1312,13 +1312,21 @@ BODY.type-1 .news-title,
 BODY.type-1 .news-date 			{ color:#C7313C; }
 BODY.type-1 .news-node-link 	{ }
 BODY.type-1 .navbar-toggle 		{ border-left:1px solid #e96570 !important; }
+
+BODY.type-2 .navbar-nav > LI,
+BODY.type-2 .lang-select		{ border-color:#6a737b; }
+BODY.type-2 .navbar-nav > LI > A:hover { background:#6a737b; }
+BODY.type-2 .hotline-menu-text  { color:#6a737b;  }
+/*
 BODY.type-2 .hotline-menu, 
 BODY.type-2 .flights-menu, 
 BODY.type-2 .news-menu,  
 BODY.type-2 .lang-select 		{ border-color:#6a737b; }
 BODY.type-2 .flights-menu:hover, 
 BODY.type-2 .news-menu:hover 	{ background:#6a737b; }
-BODY.type-2 .hotline-menu-text  { color:#6a737b;  }
+*/
+
+
 BODY.type-2 .lang-select 		{ background:#262C2F;  }
 BODY.type-2 .lang-select A 		{ background:#262C2F;}
 BODY.type-2 .lang-select A:hover { background:#6a737b;}
@@ -1413,6 +1421,9 @@ XS = 480px;
 	.flights-menu, 
 	.news-menu, 
 	.lang-select 				{ padding:0.4em !important; }
+	.navbar-ex1-collapse.collapse.in #menu_1{ position:absolute; width:100%;}
+	.navbar-ex1-collapse.collapse.in #menu_1 LI { display:block; text-align:center; height:auto; padding:0.4em 0em;  }
+	.navbar-ex1-collapse.collapse.in #menu_1 > A { display:block; height:auto; padding:0em; margin:0em; }
 	
 	/* NEWS - PAGES 
 	--------------------------------------------------------------*/
