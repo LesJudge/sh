@@ -2,7 +2,7 @@
 if (!defined('BASEPATH')) {
 	exit('No direct script access allowed');
 }
-$config['site_new'] = false; // New or old design.
+$config['site_new'] = true; // New or old design.
 $config['site_before_popup_article_id'] = 220; // Article's ID that should be display on the "old" start page.
 $config['site_faq_article_id'] = 218;
 $config['site_ustream_article_id'] = 217;
