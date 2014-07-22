@@ -1238,10 +1238,11 @@ BODY.type-2 .button:hover 	{ background:none;}
 .news-node-link 			{ max-width:none; padding:0.5em 1.5em;  }
 BODY.type-2 .news-node-link { position:relative; z-index:10; background:none;  max-width:none; padding:0.5em 1em; 
 								-webkit-border-radius: 5px; -moz-border-radius:5px; border-radius:5px; behavior: url(../css/behavior/PIE.htc); }
-.news-top 					{ margin-top:1em;} 	
+.news-top 					{ margin-top:1em; text-align:center;} 	
+.news-node					{ text-align:left;}
 .news-node .img-responsive	{ width:100%; max-width:none; }
 .news-title 				{ line-height:1.2em;}
-.news-preview-text 			{ max-width:none; }
+.news-preview-text 			{ max-width:none; text-align:left; }
 .news-node-link 			{ max-width:none;  padding:0.5em 1.5em; margin:0.5em 0em; text-align: center; }
 .news-content  IMG			{ max-width:none; width:100%; height:auto; }
 
